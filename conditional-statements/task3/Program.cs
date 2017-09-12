@@ -8,7 +8,7 @@ namespace task3
         {
             // prompt user
             Console.Write("please enter a number");
-
+            Console.WriteLine();
             // Read user input
             string userInput;
             userInput = Console.ReadLine();
