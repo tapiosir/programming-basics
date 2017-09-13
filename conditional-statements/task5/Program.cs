@@ -13,17 +13,40 @@ namespace task5
             // Read user input
             string userInput;
             userInput = Console.ReadLine();
+
+            //ticket prices
+            double ticketPriceAge = 16 * 0.5;
+            double ticketPriceMtk = 16 * 0.85;
+            double ticketPriceMili = 16 * 0.5;
+            double ticketPriceStud = 16 * 0.55;
+            double ticketPriceMtkStud = 16 * 0.40;
             
-          
             // Evaluate user input
 
             int age;
             int.TryParse(userInput, out age);
 
-            
-
-
-
+            if (age < 8)
+            {
+                Console.WriteLine("ticket is free");
+            }
+            else if (age > 64)
+            {
+                Console.WriteLine("ticket is {0}e ", ticketPriceAge);
+            }
+            else if (age < 16)
+            {
+                Console.WriteLine("ticket is {0}", ticketPriceAge);
+            }
+            else
+            {
+                Console.WriteLine("other discounts? (student, military, mtk?) ");
+                
+                
+                
+                
+                                                           
+            }
             Console.ReadKey();
 
 
