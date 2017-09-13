@@ -26,7 +26,9 @@ namespace task3
                     Console.WriteLine("number {0} is positive and even", evaluatedNumber);
                 }
                 else
+                {
                     Console.WriteLine("number {0} is positive and odd", evaluatedNumber);
+                }
             }
             if (evaluatedNumber < 0)
             {
@@ -35,7 +37,9 @@ namespace task3
                     Console.WriteLine("number {0} is negative and even", evaluatedNumber);
                 }
                 else
+                {
                     Console.WriteLine("number {0} is negative and odd", evaluatedNumber);
+                }
             }
             
             Console.ReadKey();

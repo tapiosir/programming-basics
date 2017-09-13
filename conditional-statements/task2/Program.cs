@@ -8,7 +8,7 @@ namespace task2
         {
 
             // prompt user
-            Console.Write("please enter a number");
+            Console.Write("please enter a number: ");
 
             // Read user input
             string userInput;
@@ -17,21 +17,29 @@ namespace task2
             // Evaluate user input
 
             int evaluatedNumber;
-            int.TryParse(userInput, out evaluatedNumber);
+            bool isTrue;
+            isTrue = int.TryParse(userInput, out evaluatedNumber);
 
-           
-
-            if (evaluatedNumber % 2 == 0)
+            if (isTrue == true)
             {
-                // number 0 is considered to be even
-                Console.WriteLine("number {0} is even", evaluatedNumber);
-            }
 
+
+                if (evaluatedNumber % 2 == 0)
+                {
+                    // number 0 is considered to be even
+                    Console.WriteLine("number {0} is even", evaluatedNumber);
+                }
+
+                else
+                {
+                    Console.WriteLine("number {0} is odd", evaluatedNumber);
+                }
+            }
             else
             {
-                Console.WriteLine("number {0} is odd", evaluatedNumber);
+                Console.WriteLine("Invalid char");
             }
-
+                
 
             // wait for user input
             Console.ReadKey();
