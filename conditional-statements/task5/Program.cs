@@ -40,12 +40,44 @@ namespace task5
             }
             else
             {
-                Console.WriteLine("other discounts? (student, military, mtk?) ");
-                
-                
-                
-                
-                                                           
+                Console.WriteLine("other discounts? \n 1.servicemen \n 2.member of Mtk \n 3.student \n 4.student and mtk \n 0.none ");
+
+                string userInput1;
+                userInput1 = Console.ReadLine();
+
+                int discountSelect;
+                int.TryParse(userInput1, out discountSelect);
+
+
+                if (discountSelect == 1)
+                {
+                    Console.WriteLine("ticket is {0}", ticketPriceMili);
+                }
+
+                else if (discountSelect == 2)
+                {
+                    Console.WriteLine("ticket is {0}", ticketPriceMtk);
+                }
+
+                else if (discountSelect == 3)
+                {
+                    Console.WriteLine("ticket is {0}", ticketPriceStud);
+                }
+
+                else if (discountSelect == 4)
+                {
+                    Console.WriteLine("ticket is {0}", ticketPriceMtkStud);
+                }
+
+                else if (discountSelect == 0)
+                {
+                    Console.WriteLine("ticket price is 16");
+                }
+
+                else
+                {
+                    Console.WriteLine("invalid charater");
+                }
             }
             Console.ReadKey();
 
