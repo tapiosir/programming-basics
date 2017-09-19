@@ -30,7 +30,6 @@ namespace loops
                 }
 
                 Console.WriteLine("{0}", j);
-
             }  
             
 

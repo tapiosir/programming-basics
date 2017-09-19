@@ -6,7 +6,35 @@ namespace task03
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("enter a number");
+            Console.WriteLine();
+
+            string userInput;
+            userInput = Console.ReadLine();
+
+            int num01;
+            int.TryParse(userInput, out num01);
+
+            int j = 0;
+            int k = 0;
+
+            for (int i = 1; i <= num01; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    j = j + i;
+                }
+               
+                else 
+                {
+                    k = k + i;
+                }
+
+                
+            }
+            Console.WriteLine("parillisten summa{0}", j);
+            Console.WriteLine("parittomien summa{0}", k);
+            Console.ReadKey();
         }
     }
 }
