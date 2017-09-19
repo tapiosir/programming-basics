@@ -32,8 +32,8 @@ namespace task03
 
                 
             }
-            Console.WriteLine("parillisten summa{0}", j);
-            Console.WriteLine("parittomien summa{0}", k);
+            Console.WriteLine("even numbers sum {0}", j);
+            Console.WriteLine("odd numbers sum {0}", k);
             Console.ReadKey();
         }
     }
