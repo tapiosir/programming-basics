@@ -1,20 +1,21 @@
 ﻿using System;
 
-namespace task06
+namespace task07
 {
     class Program
     {
         static void Main(string[] args)
         {
             int i = 1;
-            double j = 1;
-
+            int j = 1;
+            int k;
             do
             {
-                j = Math.Sqrt(i);
-                Console.WriteLine("{0}\t {1}", i, j);
+                k = i * j;
+                Console.WriteLine("{0}x{1}={2}", i, j, k);
             }
-            while (i++ < 10);
+            while (j++ < 9);
+            
             
             Console.ReadKey();
         }
