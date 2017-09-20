@@ -7,11 +7,18 @@ namespace task08
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int i = rnd.Next(50);
             
 
-
             
+            int j = 0;
+
+            while (j++ < 5)
+            {
+                int i = rnd.Next(50);
+                Console.WriteLine(i.ToString());
+            }
+
+
 
             Console.ReadKey();
             
