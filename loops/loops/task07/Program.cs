@@ -6,16 +6,16 @@ namespace task07
     {
         static void Main(string[] args)
         {
-            int i = 1;
-            int j = 1;
-            int k;
-            do
+
+            int k = 10;
+            for (int i = 1; i <= 9; i++)
             {
-                k = i * j;
-                Console.WriteLine("{0}x{1}={2}", i, j, k);
+                for (int j = 1; j < k; j++)
+                {
+                    Console.WriteLine("{0}x{1}={2}", j, i, i*j );
+                }
+                Console.WriteLine();
             }
-            while (j++ < 9);
-            
             
             Console.ReadKey();
         }
