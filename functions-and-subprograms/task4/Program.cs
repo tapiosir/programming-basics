@@ -9,30 +9,52 @@ namespace task4
         static void Main(string[] args)
         {
             NumberCollector();
+            Console.WriteLine();
             Console.ReadKey();
             
         }
         public static void NumberCollector()
         {
-            Console.WriteLine("enter 10");
-            string userInput;
-            userInput = Console.ReadLine();
-            int i;
-            int.TryParse(userInput, out i);
-            
-          
-            
             List<int> list = new List<int>(); //https://www.dotnetperls.com/list
-
-            list.Add(i);
-            list.Add(i);
-
-            foreach (int prime in list)
+            Console.WriteLine("enter 10 numbers");
+            for (int j = 1; j <= 11;)
             {
-                Console.WriteLine(prime);
+                if (j == 11)
+                {
+                    j++;
+                    foreach (var el in list)
+                        Console.Write("{0},",el);
+                }
+                else
+                {
+                    Console.Write("{0}: ", j);
+                    string userInput;
+                    userInput = Console.ReadLine();
+                    int i;
+                    bool isTrue;
+                    isTrue = int.TryParse(userInput, out i);
+
+                    if (isTrue == true)
+                    {
+                        if (i < 0)
+                        {
+                            Console.WriteLine("number {0} is negative, please enter positive number", i);
+                        }
+                        else
+                        {
+                            j++;
+                            list.Add(i);
+                                          
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("invalid charater");
+                    }
+                }
             }
-
-
+          
 
 
         }
