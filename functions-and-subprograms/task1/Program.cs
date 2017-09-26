@@ -30,11 +30,6 @@ namespace task1
                     Console.Write("*");
                 }
             }
-
-
-
-
-
         }
 
     }
