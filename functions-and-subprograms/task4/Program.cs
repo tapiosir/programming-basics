@@ -15,15 +15,24 @@ namespace task4
         }
         public static void NumberCollector()
         {
-            List<int> list = new List<int>(); //https://www.dotnetperls.com/list
+            List<int> list = new List<int>(); 
             Console.WriteLine("enter 10 numbers");
             for (int j = 1; j <= 11;)
             {
                 if (j == 11)
                 {
                     j++;
+                    Console.WriteLine("you entered numbers: ");
                     foreach (var el in list)
-                        Console.Write("{0},",el);
+                        Console.Write("{0}. ",el);
+                    int max = list[0];
+                    for (int i = 1; i < list.Count; i++)
+                    {
+                        max = Math.Max(max, list[i]);
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine("largest input was {0}", max);
+                    
                 }
                 else
                 {
@@ -43,20 +52,15 @@ namespace task4
                         else
                         {
                             j++;
-                            list.Add(i);
-                                          
+                            list.Add(i);                
                         }
-
                     }
                     else
                     {
                         Console.WriteLine("invalid charater");
                     }
                 }
-            }
-          
-
-
+            }         
         }
     }
 }
