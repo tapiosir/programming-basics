@@ -10,6 +10,15 @@ namespace task03
             string userInput;
             userInput = Console.ReadLine();
 
+            int count = 0;
+            foreach (char l in userInput)
+            {
+                if (l == 'l') count++;
+                else if (l == 'L') count++;
+            }
+
+            Console.WriteLine(count);
+            Console.ReadKey();
 
         }
     }
